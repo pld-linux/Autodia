@@ -6,7 +6,6 @@ Version:	1.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
-# Source0 URL???
 Source0:	http://droogs.org/autodia/download/%{name}-%{version}.tar.gz
 URL:		http://droogs.org/autodia/
 BuildRequires:	rpm-perlprov
