@@ -3,7 +3,7 @@ Summary:	Autodia - producing an XML documents from source code or data
 Summary(pl):	Autodia - tworzenie dokumentów XML z kodu ¼ród³owego lub danych
 Name:		Autodia
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://droogs.org/autodia/download/%{name}-%{version}.tar.gz
@@ -29,7 +29,8 @@ C++, Javy i PHP. Ten program poprzednio nazywa³ siê AutoDIAL.
 %setup -q -n %{name}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
 
 %{__make} test
@@ -37,7 +38,8 @@ perl Makefile.PL
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-%{perl_sitelib}/Autodia.pm
-%{perl_sitelib}/Autodia
+%{perl_vendorlib}/Autodia.pm
+%{perl_vendorlib}/Autodia
 %{_mandir}/man3/*
