@@ -1,9 +1,11 @@
-Summary:	Autodia
+Summary:	Autodia - producing an XML documents from source code or data
+Summary(pl):	Autodia - tworzenie dokumentów XML z kodu ¼ród³owego lub danych
 Name:		Autodia
 Version:	1.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
+# Source0 URL???
 Source0:	%{name}-%{version}.tar.gz
 URL:		http://droogs.org/autodia/
 BuildRequires:	perl
@@ -11,41 +13,38 @@ BuildRequires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-AutoDia is a modular application that parses source code or data (if a handler
-is available) and produces an XML document in Dia format. Handlers for Perl,
-C++, Java and PHP are available. (This used to be called AutoDIAL.) 
+AutoDia is a modular application that parses source code or data (if a
+handler is available) and produces an XML document in Dia format.
+Handlers for Perl, C++, Java and PHP are available. (This used to be
+called AutoDIAL.)
 
+%description -l pl
+AutoDia to modularna aplikacja analizuj±ca kod ¼ród³owy lub dane
+(je¶li dostêpna jest odpowiednia procedura obs³ugi) i generuj±ca
+dokument XML w formacie Dia. Dostêpne s± procedury obs³ugi dla Perla,
+C++, Javy i PHP. (Program nazywa³ siê AutoDIAL)
 
 %prep
 %setup -q -n %{name}-%{version}
 
 %build
 perl Makefile.PL
-make
-make test
+%{__make}
+
+%{__make} test
 
 %install
-#make install
-#rm -rf $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%pre
-
-%preun
-
-%post
-
-%postun
-
 %files
 %defattr(644,root,root,755)
 %doc README
-%{_mandir}/man3/*
 %attr(755,root,root) %{_bindir}/*
 # FIXME:
-/usr/lib/perl5
+%{_libdir}/perl5
+%{_mandir}/man3/*
