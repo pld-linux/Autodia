@@ -2,15 +2,18 @@
 Summary:	Autodia - producing an XML documents from source code or data
 Summary(pl):	Autodia - tworzenie dokumentów XML z kodu ¼ród³owego lub danych
 Name:		Autodia
-Version:	2.00
+Version:	2.01
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://droogs.org/autodia/download/%{name}-%{version}.tar.gz
-# Source0-md5:	ed776c9d6e29600c2618896a1cbd610a
+# Source0-md5:	bb9c29bad4b910339442f8c9b0651f4b
 URL:		http://droogs.org/autodia/
+BuildRequires:	perl-Template-Toolkit
 BuildRequires:	rpm-perlprov
-#Requires:	dia
+Requires:	perl-Inline
+Requires:	perl-Inline-Java
+Requires:	perl-XML-Simple
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
