@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	Autodia - producing an XML documents from source code or data
 Summary(pl):	Autodia - tworzenie dokumentów XML z kodu ¼ród³owego lub danych
 Name:		Autodia
@@ -6,10 +7,11 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 # Source0 URL???
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://droogs.org/autodia/download/%{name}-%{version}.tar.gz
 URL:		http://droogs.org/autodia/
-BuildRequires:	perl
+BuildRequires:	rpm-perlprov
 #Requires:	dia
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +24,7 @@ called AutoDIAL.)
 AutoDia to modularna aplikacja analizuj±ca kod ¼ród³owy lub dane
 (je¶li dostêpna jest odpowiednia procedura obs³ugi) i generuj±ca
 dokument XML w formacie Dia. Dostêpne s± procedury obs³ugi dla Perla,
-C++, Javy i PHP. (Program nazywa³ siê AutoDIAL)
+C++, Javy i PHP. Ten program poprzednio nazywa³ siê AutoDIAL.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -45,6 +47,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-# FIXME:
-%{_libdir}/perl5
+%{perl_sitelib}/Autodia.pm
+%{perl_sitelib}/Autodia
 %{_mandir}/man3/*
