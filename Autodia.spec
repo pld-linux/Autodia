@@ -27,7 +27,7 @@ dokument XML w formacie Dia. Dostêpne s± procedury obs³ugi dla Perla,
 C++, Javy i PHP. Ten program poprzednio nazywa³ siê AutoDIAL.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %{__perl} Makefile.PL \
