@@ -7,6 +7,7 @@ Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://droogs.org/autodia/download/%{name}-%{version}.tar.gz
+# Source0-md5:	4f3cf8c2aa81df384d961027b67a2462
 URL:		http://droogs.org/autodia/
 BuildRequires:	rpm-perlprov
 #Requires:	dia
