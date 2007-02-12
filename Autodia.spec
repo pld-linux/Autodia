@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Autodia - producing an XML documents from source code or data
-Summary(pl):	Autodia - tworzenie dokumentów XML z kodu ¼ród³owego lub danych
+Summary(pl.UTF-8):   Autodia - tworzenie dokumentÃ³w XML z kodu ÅºrÃ³dÅ‚owego lub danych
 Name:		Autodia
 Version:	2.02
 Release:	1
@@ -23,11 +23,11 @@ handler is available) and produces an XML document in Dia format.
 Handlers for Perl, C++, Java and PHP are available. (This used to be
 called AutoDIAL.)
 
-%description -l pl
-AutoDia to modularna aplikacja analizuj±ca kod ¼ród³owy lub dane
-(je¶li dostêpna jest odpowiednia procedura obs³ugi) i generuj±ca
-dokument XML w formacie Dia. Dostêpne s± procedury obs³ugi dla Perla,
-C++, Javy i PHP. Ten program poprzednio nazywa³ siê AutoDIAL.
+%description -l pl.UTF-8
+AutoDia to modularna aplikacja analizujÄ…ca kod ÅºrÃ³dÅ‚owy lub dane
+(jeÅ›li dostÄ™pna jest odpowiednia procedura obsÅ‚ugi) i generujÄ…ca
+dokument XML w formacie Dia. DostÄ™pne sÄ… procedury obsÅ‚ugi dla Perla,
+C++, Javy i PHP. Ten program poprzednio nazywaÅ‚ siÄ™ AutoDIAL.
 
 %prep
 %setup -q
