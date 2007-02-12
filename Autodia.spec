@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Autodia - producing an XML documents from source code or data
-Summary(pl.UTF-8):   Autodia - tworzenie dokumentów XML z kodu źródłowego lub danych
+Summary(pl.UTF-8):	Autodia - tworzenie dokumentów XML z kodu źródłowego lub danych
 Name:		Autodia
 Version:	2.02
 Release:	1
